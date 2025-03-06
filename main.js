@@ -18,11 +18,8 @@ bugfix:
 
 function getLengthOfMissingArray(arrayOfArrays) {
     const isValid = (arr) => arr && arr.length ? arr : 0;
-    console.log(!!isValid(null))
-    console.log(!!isValid(0))
-    console.log(!!isValid([]))
-    console.log(!!isValid([0]))
-    console.log(!!isValid([null]))
+    return arrayOfArrays.every(isValid)
 }
 
-getLengthOfMissingArray()
+console.log(getLengthOfMissingArray([[2],[4]]))
+console.log(getLengthOfMissingArray([[2],[]]))
